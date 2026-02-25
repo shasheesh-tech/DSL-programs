@@ -1,24 +1,21 @@
 #include <iostream>
 using namespace std;
 
-// Node structure (ADT representation)
+
 struct Node {
     int data;
     Node* next;
 };
 
-// Linked List ADT Class
+
 class SinglyLinkedList {
 private:
     Node* head;
 
 public:
-    // Constructor (Initialize list)
     SinglyLinkedList() {
         head = NULL;
     }
-
-    // Insert at Beginning
     void insertBeginning(int value) {
         Node* newNode = new Node;
         newNode->data = value;
@@ -27,7 +24,6 @@ public:
         cout << "Inserted at Beginning Successfully\n";
     }
 
-    // Insert at End
     void insertEnd(int value) {
         Node* newNode = new Node;
         newNode->data = value;
@@ -47,7 +43,6 @@ public:
         cout << "Inserted at End Successfully\n";
     }
 
-    // Insert at Position
     void insertAtPosition(int value, int pos) {
         if (pos == 1) {
             insertBeginning(value);
@@ -71,8 +66,6 @@ public:
         temp->next = newNode;
         cout << "Inserted at Position " << pos << " Successfully\n";
     }
-
-    // Delete from Beginning
     void deleteBeginning() {
         if (head == NULL) {
             cout << "List is Empty\n";
@@ -85,7 +78,6 @@ public:
         cout << "Deleted from Beginning Successfully\n";
     }
 
-    // Delete from End
     void deleteEnd() {
         if (head == NULL) {
             cout << "List is Empty\n";
@@ -109,7 +101,6 @@ public:
         cout << "Deleted from End Successfully\n";
     }
 
-    // Delete at Position
     void deleteAtPosition(int pos) {
         if (head == NULL) {
             cout << "List is Empty\n";
@@ -137,7 +128,6 @@ public:
         cout << "Deleted from Position " << pos << " Successfully\n";
     }
 
-    // Search Element
     void search(int key) {
         Node* temp = head;
         int position = 1;
@@ -154,7 +144,6 @@ public:
         cout << "Element not found in the list\n";
     }
 
-    // Display List
     void display() {
         if (head == NULL) {
             cout << "List is Empty\n";
@@ -171,7 +160,6 @@ public:
     }
 };
 
-// Main Function (Menu Driven)
 int main() {
     SinglyLinkedList list;
     int choice, value, pos;
@@ -244,4 +232,5 @@ int main() {
     } while (choice != 9);
 
     return 0;
+
 }
