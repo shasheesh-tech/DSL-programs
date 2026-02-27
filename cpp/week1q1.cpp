@@ -22,7 +22,6 @@ void input(){
 cout<<"enter marks: ";
 cin>>marks;
 }
-//function to display details
 void display(){
     cout<<rollnum<<"\t"<<name<<"\t"<<marks<<endl;
 }
@@ -30,7 +29,6 @@ void display(){
     cout<<"student object with rollnumber "<<rollnum<<" is destroyed\n";
 }
 };
-
 int main(){
     int n;
     cout<<"enter number of students\n";
@@ -45,4 +43,5 @@ int main(){
     }
     delete[] students;
     return 0;
+
 }
