@@ -9,7 +9,7 @@ cin>>n;
 for(int i=0;i<n;i++){
     cout<<"enter element "<<i+1<<endl;
     cin>>x;
-    v.push_back(x);//insert elements 
+    v.push_back(x);
 }
 cout<<"vector elements are :"<<endl;
 for(vector<int>::iterator it=v.begin();it!=v.end();it++){
